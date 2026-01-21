@@ -53,7 +53,7 @@ export default function Sidebar() {
     <>
       {/* Mobile menu toggle */}
       <div
-        className="lg:hidden text-white absolute left-4 top-4 z-30 cursor-pointer bg-richblack-800 p-2 rounded-full shadow-lg border border-richblack-600 hover:bg-richblack-700 transition-colors duration-200"
+        className="lg:hidden text-white fixed left-4 top-[4.5rem] z-30 cursor-pointer bg-richblack-800 p-2 rounded-full shadow-lg border border-richblack-600 hover:bg-richblack-700 transition-colors duration-200"
         onClick={() => dispatch(setOpenSideMenu(!openSideMenu))}
       >
         {openSideMenu ? <IoMdClose size={24} /> : <HiMenuAlt1 size={24} />}
