@@ -69,10 +69,10 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed sm:relative z-20 flex h-[calc(100vh-3.5rem)] 
+        className={`fixed top-14 z-20 flex h-[calc(100vh-3.5rem)] 
         w-[80vw] sm:w-[260px] md:w-[280px] lg:w-[300px] max-w-[320px] 
         flex-col border-r border-r-richblack-600 bg-richblack-800 
-        shadow-2xl sm:shadow-none transform transition-transform duration-300 
+        shadow-2xl lg:shadow-none transform transition-transform duration-300 
         ${openSideMenu ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}
       >
         {/* Header */}
