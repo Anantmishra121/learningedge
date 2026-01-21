@@ -21,10 +21,10 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className='relative flex min-h-[calc(100vh-3.5rem)] overflow-hidden'>
+    <div className='relative flex min-h-[calc(100vh-3.5rem)]'>
       <Sidebar />
-      <div className='h-[calc(100vh-3.5rem)] w-full overflow-hidden'>
-        <div className='h-full p-6 lg:p-10'>
+      <div className='min-h-[calc(100vh-3.5rem)] w-full overflow-y-auto'>
+        <div className='p-6 lg:p-10'>
           <Outlet />
         </div>
       </div>
