@@ -102,45 +102,38 @@ const ContactUsForm = () => {
           Phone Number
         </label>
 
-        <div className="flex gap-3">
-          <div className="flex w-[90px] flex-col gap-2">
-            <select
-              type="text"
-              name="countrycode"
-              id="countrycode"
-              className="w-full rounded-lg bg-richblack-800 border border-richblack-600 p-2 text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
-              {...register("countrycode", { required: true })}
-            >
-              {CountryCode.map((ele, i) => {
-                return (
-                  <option key={i} value={ele.code} className="bg-richblack-800 text-white">
-                    {ele.code} -{ele.country}
-                  </option>
-                )
-              })}
-            </select>
-          </div>
+        <div className="flex items-stretch gap-3">
+          <select
+            name="countrycode"
+            id="countrycode"
+            className="w-[90px] rounded-lg bg-richblack-800 border border-richblack-600 p-2 text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
+            {...register("countrycode", { required: true })}
+          >
+            {CountryCode.map((ele, i) => (
+              <option key={i} value={ele.code} className="bg-richblack-800 text-white">
+                {ele.code} - {ele.country}
+              </option>
+            ))}
+          </select>
 
-          <div className="flex flex-1 flex-col gap-2">
-            <input
-              type="number"
-              name="phonenumber"
-              id="phonenumber"
-              placeholder="Enter phone number"
-              className="w-full rounded-lg bg-richblack-800 border border-richblack-600 p-2 text-white placeholder-richblack-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
-              {...register("phoneNo", {
-                required: {
-                  value: true,
-                  message: "Please enter your Phone Number.",
-                },
-                maxLength: { value: 12, message: "Invalid Phone Number" },
-                minLength: { value: 10, message: "Invalid Phone Number" },
-              })}
-            />
-          </div>
+          <input
+            type="tel"
+            name="phonenumber"
+            id="phonenumber"
+            placeholder="Enter phone number"
+            className="flex-1 min-w-0 rounded-lg bg-richblack-800 border border-richblack-600 p-2 text-white placeholder-richblack-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
+            {...register("phoneNo", {
+              required: {
+                value: true,
+                message: "Please enter your Phone Number.",
+              },
+              maxLength: { value: 12, message: "Invalid Phone Number" },
+              minLength: { value: 10, message: "Invalid Phone Number" },
+            })}
+          />
         </div>
         {errors.phoneNo && (
-          <span className="text-xs text-yellow-400 flex items-center gap-1 ml-[108px]">
+          <span className="text-xs text-yellow-400 flex items-center gap-1">
             <span className="text-red-500">⚠</span> {errors.phoneNo.message}
           </span>
         )}

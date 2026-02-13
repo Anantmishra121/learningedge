@@ -70,8 +70,9 @@ const Contact = () => {
     }
   }
 
-  const inputClass =
-    "w-full rounded-lg bg-richblack-800 border border-richblack-600 px-4 py-3 text-sm text-richblack-5 placeholder-richblack-400 outline-none transition-all duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+  const inputBase =
+    "rounded-lg bg-richblack-800 border border-richblack-600 px-4 py-3 text-sm text-richblack-5 placeholder-richblack-400 outline-none transition-all duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+  const inputClass = `w-full ${inputBase}`
 
   return (
     <div className="min-h-screen bg-richblack-900">
@@ -195,9 +196,9 @@ const Contact = () => {
                     <label className="mb-1 block text-sm font-medium text-richblack-100">
                       Phone Number <span className="text-pink-300">*</span>
                     </label>
-                    <div className="flex gap-3">
+                    <div className="flex items-center gap-3">
                       <select
-                        className={`${inputClass} w-[120px] shrink-0`}
+                        className={`${inputBase} w-[120px] shrink-0`}
                         {...register("countrycode", { required: true })}
                         defaultValue="+91"
                       >
@@ -214,7 +215,7 @@ const Contact = () => {
                       <input
                         type="tel"
                         placeholder="12345 67890"
-                        className={`${inputClass} flex-1 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none`}
+                        className={`${inputBase} flex-1 min-w-0`}
                         {...register("phoneNo", {
                           required: "Phone number is required",
                           pattern: {
