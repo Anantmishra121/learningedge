@@ -85,16 +85,16 @@ function SignupForm() {
   ];
 
   return (
-    <div className="mt-4">
+    <div className="mt-2">
       {/* Tab */}
       <Tab tabData={tabData} field={accountType} setField={setAccountType} />
 
       {/* Form */}
-      <form onSubmit={handleOnSubmit} className="flex w-full flex-col gap-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <form onSubmit={handleOnSubmit} className="flex w-full flex-col gap-y-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {/* First Name */}
           <div className="flex flex-col">
-            <label className="text-richblack-5 text-sm font-medium mb-2">
+            <label className="text-richblack-5 text-sm font-medium mb-1">
               First Name <span className="text-pink-200">*</span>
             </label>
             <input
@@ -104,13 +104,13 @@ function SignupForm() {
               value={firstName}
               onChange={handleOnChange}
               placeholder="Enter first name"
-              className="w-full rounded-lg bg-richblack-800 p-3 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
+              className="w-full rounded-lg bg-richblack-800 p-2.5 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
             />
           </div>
 
           {/* Last Name */}
           <div className="flex flex-col">
-            <label className="text-richblack-5 text-sm font-medium mb-2">
+            <label className="text-richblack-5 text-sm font-medium mb-1">
               Last Name <span className="text-pink-200">*</span>
             </label>
             <input
@@ -120,14 +120,14 @@ function SignupForm() {
               value={lastName}
               onChange={handleOnChange}
               placeholder="Enter last name"
-              className="w-full rounded-lg bg-richblack-800 p-3 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
+              className="w-full rounded-lg bg-richblack-800 p-2.5 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
             />
           </div>
         </div>
 
         {/* Email Address */}
         <div className="flex flex-col">
-          <label className="text-richblack-5 text-sm font-medium mb-2">
+          <label className="text-richblack-5 text-sm font-medium mb-1">
             Email Address <span className="text-pink-200">*</span>
           </label>
           <input
@@ -137,14 +137,14 @@ function SignupForm() {
             value={email}
             onChange={handleOnChange}
             placeholder="Enter email address"
-            className="w-full rounded-lg bg-richblack-800 p-3 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
+            className="w-full rounded-lg bg-richblack-800 p-2.5 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {/* Create Password */}
           <div className="flex flex-col relative">
-            <label className="text-richblack-5 text-sm font-medium mb-2">
+            <label className="text-richblack-5 text-sm font-medium mb-1">
               Create Password <span className="text-pink-200">*</span>
             </label>
             <input
@@ -154,12 +154,12 @@ function SignupForm() {
               value={password}
               onChange={handleOnChange}
               placeholder="Enter Password"
-              className="w-full rounded-lg bg-richblack-800 p-3 pr-12 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
+              className="w-full rounded-lg bg-richblack-800 p-2.5 pr-12 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
             />
             <button
               type="button"
               onClick={() => setShowPassword((prev) => !prev)}
-              className="absolute right-3 top-10 text-richblack-400 hover:text-richblack-200 transition-colors duration-200"
+              className="absolute right-3 top-9 text-richblack-400 hover:text-richblack-200 transition-colors duration-200"
             >
               {showPassword ? (
                 <AiOutlineEyeInvisible size={20} />
@@ -171,7 +171,7 @@ function SignupForm() {
 
           {/* Confirm Password */}
           <div className="flex flex-col relative">
-            <label className="text-richblack-5 text-sm font-medium mb-2">
+            <label className="text-richblack-5 text-sm font-medium mb-1">
               Confirm Password <span className="text-pink-200">*</span>
             </label>
             <input
@@ -181,12 +181,12 @@ function SignupForm() {
               value={confirmPassword}
               onChange={handleOnChange}
               placeholder="Confirm Password"
-              className="w-full rounded-lg bg-richblack-800 p-3 pr-12 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
+              className="w-full rounded-lg bg-richblack-800 p-2.5 pr-12 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
             />
             <button
               type="button"
               onClick={() => setShowConfirmPassword((prev) => !prev)}
-              className="absolute right-3 top-10 text-richblack-400 hover:text-richblack-200 transition-colors duration-200"
+              className="absolute right-3 top-9 text-richblack-400 hover:text-richblack-200 transition-colors duration-200"
             >
               {showConfirmPassword ? (
                 <AiOutlineEyeInvisible size={20} />
@@ -199,7 +199,7 @@ function SignupForm() {
 
         <button
           type="submit"
-          className="mt-8 mx-auto block rounded-lg bg-yellow-50 py-2 px-4 font-semibold text-richblack-900 hover:bg-yellow-100 focus:bg-yellow-100 focus:ring-2 focus:ring-yellow-50/50 transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98]"
+          className="mt-4 mx-auto block rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 py-2 px-4 font-semibold text-white shadow-lg hover:from-blue-600 hover:to-blue-700 focus:from-blue-600 focus:to-blue-700 focus:ring-2 focus:ring-blue-500/50 transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98]"
         >
           Create Account
         </button>

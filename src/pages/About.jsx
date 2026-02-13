@@ -6,7 +6,6 @@ import BannerImage2 from "../assets/Images/Aboutus2.jpeg"
 import BannerImage3 from "../assets/Images/Aboutus3.jpeg"
 
 import Footer from "../components/common/Footer"
-import ContactFormSection from "../components/core/AboutPage/ContactFormSection"
 import LearningGrid from "../components/core/AboutPage/LearningGrid"
 import StatsComponenet from "../components/core/AboutPage/Stats"
 import HighlightText from "../components/core/HomePage/HighlightText"
@@ -250,16 +249,6 @@ const About = () => {
               viewport={{ once: false, amount: 0.1 }}
             >
               <LearningGrid />
-            </motion.div>
-
-            <motion.div
-              variants={fadeIn('up', 0.4)}
-              initial='hidden'
-              whileInView={'show'}
-              viewport={{ once: false, amount: 0.1 }}
-              className="bg-gradient-to-br from-richblack-800/50 to-richblack-700/50 backdrop-blur-sm border border-white/10 rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl"
-            >
-              <ContactFormSection />
             </motion.div>
           </div>
         </div>

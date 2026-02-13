@@ -1,5 +1,4 @@
 // Login Page Component
-import loginImg from "../assets/Images/login_img.png"
 import Template from "../components/core/Auth/Template"
 
 function Login() {
@@ -8,8 +7,6 @@ function Login() {
     <Template
       title=" Sign In to LearningEdge"
       description1="Your personalized learning space is just one click away"
-    
-      image={loginImg}
       formType="login"
     />
   )
