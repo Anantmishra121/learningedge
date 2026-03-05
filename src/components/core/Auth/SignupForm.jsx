@@ -104,7 +104,7 @@ function SignupForm() {
               value={firstName}
               onChange={handleOnChange}
               placeholder="Enter first name"
-              className="w-full rounded-lg bg-richblack-800 p-2.5 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
+              className="w-full rounded-lg bg-richblack-800 p-2.5 text-richblack-5 outline-none border border-richblack-700 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200 placeholder:text-richblack-400"
             />
           </div>
 
@@ -120,7 +120,7 @@ function SignupForm() {
               value={lastName}
               onChange={handleOnChange}
               placeholder="Enter last name"
-              className="w-full rounded-lg bg-richblack-800 p-2.5 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
+              className="w-full rounded-lg bg-richblack-800 p-2.5 text-richblack-5 outline-none border border-richblack-700 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200 placeholder:text-richblack-400"
             />
           </div>
         </div>
@@ -137,7 +137,7 @@ function SignupForm() {
             value={email}
             onChange={handleOnChange}
             placeholder="Enter email address"
-            className="w-full rounded-lg bg-richblack-800 p-2.5 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
+            className="w-full rounded-lg bg-richblack-800 p-2.5 text-richblack-5 outline-none border border-richblack-700 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200 placeholder:text-richblack-400"
           />
         </div>
 
@@ -154,7 +154,7 @@ function SignupForm() {
               value={password}
               onChange={handleOnChange}
               placeholder="Enter Password"
-              className="w-full rounded-lg bg-richblack-800 p-2.5 pr-12 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
+              className="w-full rounded-lg bg-richblack-800 p-2.5 pr-12 text-richblack-5 outline-none border border-richblack-700 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200 placeholder:text-richblack-400"
             />
             <button
               type="button"
@@ -181,7 +181,7 @@ function SignupForm() {
               value={confirmPassword}
               onChange={handleOnChange}
               placeholder="Confirm Password"
-              className="w-full rounded-lg bg-richblack-800 p-2.5 pr-12 text-richblack-5 outline-none border border-richblack-700 focus:border-yellow-50 focus:ring-2 focus:ring-yellow-50/20 transition-all duration-200 placeholder:text-richblack-400"
+              className="w-full rounded-lg bg-richblack-800 p-2.5 pr-12 text-richblack-5 outline-none border border-richblack-700 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200 placeholder:text-richblack-400"
             />
             <button
               type="button"
